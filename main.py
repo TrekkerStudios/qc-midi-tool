@@ -28,7 +28,7 @@ def send_program_change(outport, program_number, channel=0):
     print(f"Sent Program Change message: {msg}")
 
 def main():
-    input_name = 'Soleman MIDI 1'
+    input_name = 'mio'
     output_name = 'Quad Cortex'
     target_cc_number = 0  # Change this to the incoming CC number you want to detect
     response_cc_number = 0  # Change this to the CC number you want to send in response
