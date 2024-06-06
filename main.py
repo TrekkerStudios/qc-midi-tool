@@ -16,7 +16,7 @@ def main():
     target_cc_number = 0  # Change this to the incoming CC number you want to detect
     response_cc_number = 0  # Change this to the CC number you want to send in response
     response_cc_value = 0  # Change this to the value of the CC message you want to send
-    program_value = 0 # tracks preset
+    program_value = 1 # tracks preset
 
     # Open the input port
     with mido.open_input(input_name) as inport:
