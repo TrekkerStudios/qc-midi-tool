@@ -11,8 +11,8 @@ def send_program_change(outport, program_number, channel=0):
     print(f"Sent Program Change message: {msg}")
 
 def main():
-    input_name = 'mio'
-    output_name = 'mio'
+    input_name = 'mio' # Change this to the incoming MIDI port name
+    output_name = 'mio' # Change this to the outgoing MIDI port name
     target_cc_number = 0  # Change this to the incoming CC number you want to detect
     response_cc_number = 0  # Change this to the CC number you want to send in response
     response_cc_value = 0  # Change this to the value of the CC message you want to send
