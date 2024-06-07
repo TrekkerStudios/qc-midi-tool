@@ -27,7 +27,7 @@ def main():
 
             # Loop to receive and process messages
             for msg in inport:
-                if msg.type == 'control_change' and msg.control == target_cc_number:
+                if msg.type == 'control_change' and msg.control == target_cc_number and msg.value == 127:
                     print(f"Received target CC message: {msg}")
 
                     #check if preset 0-128 or 129-256
@@ -40,6 +40,8 @@ def main():
 
                     send_response_cc(outport, response_cc_number, response_cc_value)
                     send_program_change(outport, program_value)
+
+                    program_value += 1
                 else:
                     #passthrough if not change
                     print(f"Received message: {msg}")
